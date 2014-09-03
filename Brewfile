@@ -57,6 +57,7 @@ install node # This installs `npm` too using the recommended installation method
 install webkit2png
 #install xpdf
 #install zopfli
+install heroku
 
 install homebrew/versions/lua52
 
