@@ -1,0 +1,18 @@
+'welcome':
+  'showOnStartup': false
+'editor':
+  'softWrap': true
+  'fontSize': 15
+'core':
+  'themes': [
+    'atom-light-ui'
+    'atom-monokai'
+  ]
+  'projectHome': '~/Development'
+'tree-view':
+  'showOnRightSide': true
+  'hideVcsIgnoredFiles': false
+'jshint':
+  'validateOnlyOnSave': true
+'project-quick-open':
+  'openProjectsInSameWindow': true
