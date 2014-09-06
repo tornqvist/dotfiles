@@ -714,6 +714,9 @@ defaults write org.m0k.transmission WarningDonate -bool false
 # Hide the legal disclaimer
 defaults write org.m0k.transmission WarningLegal -bool false
 
+# Add Tranmission command line tool to
+sudo ln -s ${HOME}/init/transmission-remote-cli/transmission-remote-cli /usr/local/bin/trc
+
 ###############################################################################
 # Twitter.app                                                                 #
 ###############################################################################
