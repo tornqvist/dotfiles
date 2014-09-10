@@ -25,9 +25,14 @@ for option in autocd globstar; do
 	shopt -s "$option" 2> /dev/null;
 done;
 
-# Add tab completion for many Bash commands
 if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
+	# Add tab completion for many Bash commands
 	source "$(brew --prefix)/etc/bash_completion";
+
+	# Load nvm
+	if brew list -1 | grep -q "^nvm\$"; then
+		source $(brew --prefix nvm)/nvm.sh
+	fi
 elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;

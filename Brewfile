@@ -45,7 +45,7 @@ install git
 install imagemagick --with-webp
 #install lynx
 #install nmap
-install node # This installs `npm` too using the recommended installation method
+#install node # This installs `npm` too using the recommended installation method
 #install p7zip
 #install pigz
 #install pv
@@ -58,6 +58,7 @@ install webkit2png
 #install xpdf
 #install zopfli
 install heroku
+install nvm
 
 install homebrew/versions/lua52
 
