@@ -33,6 +33,10 @@ if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
 	if brew list -1 | grep -q "^nvm\$"; then
 		source $(brew --prefix nvm)/nvm.sh
 	fi
+
+	if brew list -1 | grep -q "^php55\$"; then
+		export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
+	fi
 elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
