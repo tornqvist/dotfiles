@@ -59,6 +59,7 @@ install webkit2png
 #install zopfli
 install heroku
 install nvm
+install ngrok
 
 install homebrew/versions/lua52
 
