@@ -60,6 +60,7 @@ install webkit2png
 install heroku
 install nvm
 install ngrok
+install multimarkdown
 
 install homebrew/versions/lua52
 
