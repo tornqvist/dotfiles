@@ -30,3 +30,4 @@ cask install spotify 2> /dev/null
 cask install flux 2> /dev/null
 cask install skype 2> /dev/null
 cask install steam 2> /dev/null
+cask install plex-media-server 2> /dev/null
