@@ -25,17 +25,20 @@ for option in autocd globstar; do
 	shopt -s "$option" 2> /dev/null;
 done;
 
-# Add tab completion for many Bash commands
-if which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
-	source "$(brew --prefix)/share/bash-completion/bash_completion";
-
+# Use programs installed with Homebrew
+if which brew > /dev/null; then
 	# Load nvm
 	if brew list -1 | grep -q "^nvm\$"; then
 		export NVM_DIR=~/.nvm;
 		source $(brew --prefix nvm)/nvm.sh;
-	fi
-elif [ -f /etc/bash_completion ]; then
-	source /etc/bash_completion;
+	fi;
+
+	# Add tab completion for many Bash commands
+	if [ -f $(brew --prefix)/etc/bash_completion ]; then
+		source $(brew --prefix)/etc/bash_completion;
+	elif [ -f /etc/bash_completion ]; then
+		source /etc/bash_completion;
+	fi;
 fi;
 
 # Enable tab completion for `g` by marking it as an alias for `git`
