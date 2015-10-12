@@ -31,7 +31,8 @@ if which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_c
 
 	# Load nvm
 	if brew list -1 | grep -q "^nvm\$"; then
-		source $(brew --prefix nvm)/nvm.sh
+		export NVM_DIR=~/.nvm;
+		source $(brew --prefix nvm)/nvm.sh;
 	fi
 elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
