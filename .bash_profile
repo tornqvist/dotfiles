@@ -25,17 +25,13 @@ for option in autocd globstar; do
 	shopt -s "$option" 2> /dev/null;
 done;
 
-if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
-	# Add tab completion for many Bash commands
-	source "$(brew --prefix)/etc/bash_completion";
+# Add tab completion for many Bash commands
+if which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
+	source "$(brew --prefix)/share/bash-completion/bash_completion";
 
 	# Load nvm
 	if brew list -1 | grep -q "^nvm\$"; then
 		source $(brew --prefix nvm)/nvm.sh
-	fi
-
-	if brew list -1 | grep -q "^php55\$"; then
-		export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
 	fi
 elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
@@ -52,7 +48,7 @@ if [ -f $HOME/.git-completion ]; then
 fi;
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
-[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh;
+[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
 
 # Add tab completion for `defaults read|write NSGlobalDomain`
 # You could just use `-g` instead, but I like being explicit
