@@ -102,6 +102,7 @@ brew install zopfli
 brew install heroku
 brew install nvm
 brew install multimarkdown
+brew install git-flow
 
 # Install Cask
 brew install caskroom/cask/brew-cask
