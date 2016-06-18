@@ -134,13 +134,13 @@ brew cask install spotify 2> /dev/null
 brew cask install flux 2> /dev/null
 brew cask install skype 2> /dev/null
 brew cask install steam 2> /dev/null
-brew cask install bankid 2> /dev/null
 brew cask install caprine 2> /dev/null
 brew cask install github 2> /dev/null
 brew cask install openemu 2> /dev/null
 brew cask install xquartz 2> /dev/null
 brew cask install inkscape 2> /dev/null
 brew cask install gimp 2> /dev/null
+brew cask install sketch 2> /dev/null
 
 # Remove outdated versions from the cellar.
 brew cleanup
