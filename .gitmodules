@@ -1,3 +1,0 @@
-[submodule "init/transmission-remote-cli"]
-	path = init/transmission-remote-cli
-	url = https://github.com/fagga/transmission-remote-cli.git

@@ -35,12 +35,6 @@ brew install bash-completion2
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
-# Install RingoJS and Narwhal.
-# Note that the order in which these are installed is important;
-# see http://git.io/brew-narwhal-ringo.
-#brew install ringojs
-#brew install narwhal
-
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
 brew install homebrew/dupes/grep
@@ -123,7 +117,6 @@ brew cask install firefox 2> /dev/null
 brew cask install sublime-text 2> /dev/null
 brew cask install atom 2> /dev/null
 brew cask install the-unarchiver 2> /dev/null
-brew cask install torbrowser 2> /dev/null
 brew cask install transmission 2> /dev/null
 brew cask install virtualbox 2> /dev/null
 brew cask install vlc 2> /dev/null
@@ -135,7 +128,7 @@ brew cask install flux 2> /dev/null
 brew cask install skype 2> /dev/null
 brew cask install steam 2> /dev/null
 brew cask install caprine 2> /dev/null
-brew cask install github 2> /dev/null
+brew cask install github-desktop 2> /dev/null
 brew cask install openemu 2> /dev/null
 brew cask install xquartz 2> /dev/null
 brew cask install inkscape 2> /dev/null
