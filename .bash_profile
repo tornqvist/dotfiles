@@ -27,17 +27,21 @@ done;
 
 # Use programs installed with Homebrew
 if which brew > /dev/null; then
+	# Add tab completion for many Bash commands
+	if [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
+		source "$(brew --prefix)/share/bash-completion/bash_completion";
+	elif [ -f /etc/bash_completion ]; then
+		source /etc/bash_completion;
+	fi;
+
 	# Load nvm
 	if brew list -1 | grep -q "^nvm\$"; then
 		export NVM_DIR=~/.nvm;
-		source $(brew --prefix nvm)/nvm.sh;
+		source $(brew --prefix nvm)/nvm.sh
 	fi;
 
-	# Add tab completion for many Bash commands
-	if [ -f $(brew --prefix)/etc/bash_completion ]; then
-		source $(brew --prefix)/etc/bash_completion;
-	elif [ -f /etc/bash_completion ]; then
-		source /etc/bash_completion;
+	if brew list -1 | grep -q "^php55\$"; then
+		export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
 	fi;
 fi;
 
