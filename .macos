@@ -32,7 +32,6 @@ sudo nvram SystemAudioVolume=" "
 for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
 	defaults write "${domain}" dontAutoLoad -array \
 		"/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
-		"/System/Library/CoreServices/Menu Extras/Volume.menu" \
 		"/System/Library/CoreServices/Menu Extras/User.menu"
 done
 defaults write com.apple.systemuiserver menuExtras -array \
@@ -443,10 +442,6 @@ sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (
 defaults write com.apple.dock wvous-br-corner -int 4
 defaults write com.apple.dock wvous-br-modifier -int 0
 
-# Bottom right screen corner → Desktop
-defaults write com.apple.dock wvous-br-corner -int 4
-defaults write com.apple.dock wvous-br-modifier -int 0
-
 ###############################################################################
 # Safari & WebKit                                                             #
 ###############################################################################
@@ -500,20 +495,20 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 # Enable continuous spellchecking
 defaults write com.apple.Safari WebContinuousSpellCheckingEnabled -bool true
 # Disable auto-correct
-defaults write com.apple.Safari WebAutomaticSpellingCorrectionEnabled -bool false
+#defaults write com.apple.Safari WebAutomaticSpellingCorrectionEnabled -bool false
 
 # Disable AutoFill
-defaults write com.apple.Safari AutoFillFromAddressBook -bool false
-defaults write com.apple.Safari AutoFillPasswords -bool false
-defaults write com.apple.Safari AutoFillCreditCardData -bool false
-defaults write com.apple.Safari AutoFillMiscellaneousForms -bool false
+#defaults write com.apple.Safari AutoFillFromAddressBook -bool false
+#defaults write com.apple.Safari AutoFillPasswords -bool false
+#defaults write com.apple.Safari AutoFillCreditCardData -bool false
+#defaults write com.apple.Safari AutoFillMiscellaneousForms -bool false
 
 # Warn about fraudulent websites
 defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true
 
 # Disable plug-ins
-defaults write com.apple.Safari WebKitPluginsEnabled -bool false
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2PluginsEnabled -bool false
+#defaults write com.apple.Safari WebKitPluginsEnabled -bool false
+#defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2PluginsEnabled -bool false
 
 # Disable Java
 defaults write com.apple.Safari WebKitJavaEnabled -bool false
@@ -753,7 +748,7 @@ defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool t
 ###############################################################################
 
 # Disable signing emails by default
-defaults write ~/Library/Preferences/org.gpgtools.gpgmail SignNewEmailsByDefault -bool false
+#defaults write ~/Library/Preferences/org.gpgtools.gpgmail SignNewEmailsByDefault -bool false
 
 ###############################################################################
 # Opera & Opera Developer                                                     #
@@ -827,9 +822,6 @@ defaults write org.m0k.transmission WarningLegal -bool false
 # Source: https://giuliomac.wordpress.com/2014/02/19/best-blocklist-for-transmission/
 defaults write org.m0k.transmission BlocklistURL -string "http://john.bitsurge.net/public/biglist.p2p.gz"
 defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
-
-# Add Tranmission command line tool to
-sudo ln -s ${HOME}/init/transmission-remote-cli/transmission-remote-cli /usr/local/bin/trc
 
 ###############################################################################
 # Twitter.app                                                                 #
