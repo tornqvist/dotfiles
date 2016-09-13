@@ -766,6 +766,16 @@ defaults write com.operasoftware.OperaDeveloper PMPrintingExpandedStateForPrint2
 #cp -r init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
 
 ###############################################################################
+# Vim                                                                         #
+###############################################################################
+
+# Install vundle and plugins
+if which git > /dev/null; then
+	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+	vim +PluginInstall +qall
+fi;	
+
+###############################################################################
 # Atom				                                                                #
 ###############################################################################
 
