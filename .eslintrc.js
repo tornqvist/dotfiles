@@ -1,4 +1,4 @@
-{
+module.exports = {
   "rules": {
     "indent": [2, 2, {
       "SwitchCase": 1
@@ -13,11 +13,7 @@
     "browser": true
   },
   "parserOptions": {
-    "ecmaVersion": 6,
     "sourceType": "module"
   },
-  "ecmaFeatures": {
-    "modules": true
-  }
   "extends": "eslint:recommended"
-}
+};
