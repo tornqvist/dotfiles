@@ -150,4 +150,6 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 alias reload="exec $SHELL -l"
 
 # Expose locally installed node modules as executables
-alias .npm="PATH=$(npm bin):$PATH"
+if which npm > /dev/null; then
+	alias .npm="PATH=$(npm bin):$PATH"
+fi;
