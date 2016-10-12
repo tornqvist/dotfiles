@@ -74,3 +74,8 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 if which pyenv > /dev/null; then
 	eval "$(pyenv init -)";
 fi;
+
+# Expose locally installed node modules as executables
+if which npm > /dev/null; then
+	alias .npm="PATH=$(npm bin):$PATH";
+fi;
