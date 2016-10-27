@@ -106,6 +106,7 @@ brew install nvm
 brew install multimarkdown
 brew install git-flow
 brew install pyenv
+brew install mas
 
 # Install Cask
 brew install caskroom/cask/brew-cask
@@ -146,6 +147,7 @@ brew cask install sketch 2> /dev/null
 brew tap caskroom/fonts
 brew cask install font-fira-code 2> /dev/null
 brew cask install font-hack 2> /dev/null
+brew cask install font-input 2> /dev/null
 
 # Remove outdated versions from the cellar.
 brew cleanup
