@@ -245,6 +245,19 @@ function o() {
 	fi;
 }
 
+# `n` run locally installed node module, fallback to globally installed
+function n() {
+  if [ -e "$(npm bin)/$1" ]; then
+    "$(npm bin)/$@";
+  elif [ -e "$(npm bin -g)/$1" ]; then
+		echo "Using global $1";
+		echo "";
+		"$(npm bin -g)/$@";
+	else
+    echo "$1 is not installed locally or globally";
+  fi;
+}
+
 # `tre` is a shorthand for `tree` with hidden files and color enabled, ignoring
 # the `.git` directory, listing directories first. The output gets piped into
 # `less` with options to preserve color and line numbers, unless the output is
