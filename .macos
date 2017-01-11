@@ -790,7 +790,10 @@ if [ -d "~/.atom" ]; then
 fi;
 
 # Install Atom config
-cp -r init/config.cson ~/.atom/config.cson 2> /dev/null\
+cp init/config.cson ~/.atom/config.cson 2> /dev/null\
+
+# Install Atom styles
+cp init/styles.less ~/.atom/styles.less 2> /dev/null\
 
 ###############################################################################
 # nvm					                                                                #
