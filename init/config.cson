@@ -1,23 +1,29 @@
-'*':
-  'welcome':
-    'showOnStartup': false
-  'editor':
-    invisibles: {}
-    fontSize: 17
-    softWrapAtPreferredLineLength: true
-    fontFamily: 'Input Mono'
-  'core':
-    'projectHome': '~/Development'
-    themes: [
-      "atom-material-ui"
-      "atom-dark-syntax"
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "45777495-8292-43fd-87cc-1d79eb000427"
+  core:
+    disabledPackages: [
+      "pinned-tabs"
+      "file-icons"
     ]
-  'tree-view':
-    'showOnRightSide': true
-    'hideVcsIgnoredFiles': false
-  'project-quick-open':
-    'openProjectsInSameWindow': true
-  'atom-material-ui':
-    compactTreeView: true
-  tabs:
-    usePreviewTabs: true
+    telemetryConsent: "limited"
+    themes: [
+      "one-dark-ui"
+      "an-old-hope-syntax"
+    ]
+  editor:
+    fontFamily: "Fira Code"
+    fontSize: 16
+  "exception-reporting":
+    userId: "27db34f6-10ab-fa0c-bdbd-7a00a033e97a"
+  "highlight-line": {}
+  "linter-eslint":
+    disableWhenNoEslintConfig: false
+    eslintrcPath: "~/.eslintrc.js"
+  minimap:
+    displayMinimapOnLeft: true
+  "tree-view":
+    showOnRightSide: true
+  welcome:
+    showOnStartup: false
