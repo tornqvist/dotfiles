@@ -138,15 +138,12 @@ brew cask install inkscape 2> /dev/null
 brew cask install gimp 2> /dev/null
 brew cask install sketch 2> /dev/null
 
-# Quick Look plugins
-brew cask install quicklook-json 2> /dev/null
-brew cask install qlcolorcode 2> /dev/null
-
 # Install fonts
 brew tap caskroom/fonts
 brew cask install font-fira-code 2> /dev/null
 brew cask install font-hack 2> /dev/null
 brew cask install font-input 2> /dev/null
+brew cask install font-jetbrains-mono 2> /dev/null
 
 # Remove outdated versions from the cellar.
 brew cleanup
