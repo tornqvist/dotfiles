@@ -110,9 +110,8 @@ brew install kr
 brew tap mongodb/brew
 brew install mongodb-community
 
-# Install Cask
-brew install caskroom/cask/brew-cask
-brew tap caskroom/versions
+# Tap cask version
+brew tap homebrew/cask-versions
 
 # Install native apps
 brew cask install google-chrome 2> /dev/null
@@ -144,9 +143,10 @@ brew cask install ngrok 2> /dev/null
 brew cask install notion 2> /dev/null
 brew cask install soundflower 2> /dev/null
 brew cask install zoomus 2> /dev/null
+brew cask install visual-studio-code 2> /dev/null
 
 # Install fonts
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 brew cask install font-fira-code 2> /dev/null
 brew cask install font-hack 2> /dev/null
 brew cask install font-input 2> /dev/null
