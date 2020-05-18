@@ -104,7 +104,7 @@ brew install redis
 brew install postgresql
 brew install rust
 brew install zsh
-brew install kr
+brew install kryptco/tap/kr
 
 # Install Mongo
 brew tap mongodb/brew
