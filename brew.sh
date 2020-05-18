@@ -98,45 +98,52 @@ brew install vbindiff
 brew install zopfli
 brew install heroku
 brew install nvm
-brew install multimarkdown
-brew install git-flow
 brew install pyenv
 brew install mas
+brew install redis
+brew install postgresql
+brew install rust
+brew install zsh
+brew install kr
+
+# Install Mongo
+brew tap mongodb/brew
+brew install mongodb-community
 
 # Install Cask
 brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
 
 # Install native apps
-brew cask install dropbox 2> /dev/null
 brew cask install google-chrome 2> /dev/null
 brew cask install google-chrome-canary 2> /dev/null
-brew cask install iterm2 2> /dev/null
-brew cask install macvim 2> /dev/null
-brew cask install miro-video-converter 2> /dev/null
 brew cask install opera 2> /dev/null
-brew cask install opera-developer 2> /dev/null
 brew cask install firefox 2> /dev/null
+brew cask install firefoxdeveloperedition 2> /dev/null
 brew cask install sublime-text 2> /dev/null
-brew cask install atom 2> /dev/null
+brew cask install sublime-merge 2> /dev/null
 brew cask install the-unarchiver 2> /dev/null
 brew cask install transmission 2> /dev/null
 brew cask install virtualbox 2> /dev/null
 brew cask install vlc 2> /dev/null
-brew cask install evernote 2> /dev/null
+brew cask install iina 2> /dev/null
 brew cask install slack 2> /dev/null
 brew cask install google-drive 2> /dev/null
 brew cask install spotify 2> /dev/null
-brew cask install flux 2> /dev/null
 brew cask install skype 2> /dev/null
 brew cask install steam 2> /dev/null
 brew cask install caprine 2> /dev/null
-brew cask install github-desktop 2> /dev/null
 brew cask install openemu 2> /dev/null
 brew cask install xquartz 2> /dev/null
-brew cask install inkscape 2> /dev/null
-brew cask install gimp 2> /dev/null
 brew cask install sketch 2> /dev/null
+brew cask install docker 2> /dev/null
+brew cask install figma 2> /dev/null
+brew cask install irccloud 2> /dev/null
+brew cask install krisp 2> /dev/null
+brew cask install ngrok 2> /dev/null
+brew cask install notion 2> /dev/null
+brew cask install soundflower 2> /dev/null
+brew cask install zoomus 2> /dev/null
 
 # Install fonts
 brew tap caskroom/fonts
