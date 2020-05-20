@@ -96,7 +96,6 @@ brew install ssh-copy-id
 brew install tree
 brew install vbindiff
 brew install zopfli
-brew install heroku
 brew install nvm
 brew install pyenv
 brew install mas
@@ -105,6 +104,10 @@ brew install postgresql
 brew install rust
 brew install zsh
 brew install kryptco/tap/kr
+
+# Install heroku
+brew tap heroku/brew
+brew install heroku
 
 # Install Mongo
 brew tap mongodb/brew
