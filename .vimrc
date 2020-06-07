@@ -26,9 +26,6 @@ if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
 
-" Don’t create backups when editing files in certain directories
-set backupskip=/tmp/*,/private/tmp/*
-
 " Respect modeline in files
 set modeline
 set modelines=4
@@ -41,11 +38,13 @@ set number
 syntax on
 " Highlight current line
 set cursorline
-" Make tabs as wide as two spaces
+" Make tabs as wide as four spaces
 set tabstop=2
+set shiftwidth=2
+set shiftround
 " Show “invisible” characters
-"set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-"set list
+" set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+" set list
 " Highlight searches
 set hlsearch
 " Ignore case of searches
@@ -61,7 +60,7 @@ set noerrorbells
 " Don’t reset cursor to start of line when moving around.
 set nostartofline
 " Show the cursor position
-set ruler
+" set ruler
 " Don’t show the intro message when starting Vim
 set shortmess=atI
 " Show the current mode
@@ -71,60 +70,27 @@ set title
 " Show the (partial) command as it’s being typed
 set showcmd
 " Use relative line numbers
-"if exists("&relativenumber")
-"	set relativenumber
-"	au BufReadPost * set relativenumber
-"endif
+if exists("&relativenumber")
+ 	set relativenumber
+ 	au BufReadPost * set relativenumber
+endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
-" Strip trailing whitespace (,ss)
-function! StripWhitespace()
-	let save_cursor = getpos(".")
-	let old_query = getreg('/')
-	:%s/\s\+$//e
-	call setpos('.', save_cursor)
-	call setreg('/', old_query)
-endfunction
-noremap <leader>ss :call StripWhitespace()<CR>
-" Save a file as root (,W)
-noremap <leader>W :w !sudo tee % > /dev/null<CR>
+" Easy switch between splits with Ctrl-h, j, k, l
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
 
-" Automatic commands
-if has("autocmd")
-	" Enable file type detection
-	filetype on
-	" Treat .json files as .js
-	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-	" Treat .md files as Markdown
-	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
-endif
+" Increase width of current vertical split
+nmap <C-v> :vertical resize +5<cr>
 
-" Set up Vundle
-filetype off                  " required
+" Toggle NERDTree
+nmap <C-b> :NERDTreeToggle<cr>
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set wildignore+=*/vendor/**
+set wildignore+=*/node_modules/**
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" Vundle plugins
-Plugin 'isRuslan/vim-es6'
-Plugin 'rakr/vim-one'
-Plugin 'scrooloose/nerdtree'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-" Set colorscheme
-set background=light
-colorscheme one
-let g:airline_theme='one'
-
-" Setup NERDTree
-let NERDTreeShowHidden=1
+" Create/edit file in the current directory
+nmap :ed :edit %:p:h/
